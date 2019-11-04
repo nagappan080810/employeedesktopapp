@@ -1,0 +1,59 @@
+#header-title {
+    font-size: 1.65rem;
+    padding: 10px;
+}
+
+.card-img-top {
+    height: 200px;
+    width: 200px;
+}
+
+.card-body {
+    padding: 5px;
+}
+
+.card {
+    text-align: center;
+    background-color: whitesmoke;
+    display: inline-block;
+    margin: 5px;
+}
+
+.card .card-title {
+    font-weight: 400;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+body.employee-list-add .modal{
+    z-index: 1007;
+  display: block;
+  opacity: 1;
+  bottom: 50;
+  height: 550px;
+	transition-property: bottom;
+	transition-duration: .75s;
+}
+
+body.employee-list-add .modal-overlay{
+    display: block;
+    opacity: 0.5;
+	transition-property: all;
+	transition-duration: 0.25s;
+    z-index: 1006; 
+}
+
+.actionBtnClass {
+    float: right;
+    background-color: cadetblue;
+}
+
+.footerClass {
+    color: white;
+    background-color: #ee6e73;
+    text-align: center;
+}
+
+.verticaltop {
+    vertical-align: top;
+}

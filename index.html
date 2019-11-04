@@ -1,0 +1,75 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700">
+	    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+        <link rel="stylesheet" href="employeelist.css">
+        <script src="node_modules/pouchdb/dist/pouchdb.min.js"></script>
+        <script src="node_modules/pouchdb/dist/pouchdb.find.min.js"></script>
+        <script src="employeelist.js"></script>
+        <title>Organization CRM</title>
+    </head>
+    <body onload="loadEmployees()">
+        <!--banner-->
+        <header class="navbar-fixed">
+            <nav id="nav" class="primary-color">
+                <span id="header-title">Employee Directory</span>
+                <button onclick="showAddModal()" class="actionBtnClass"><i class="material-icons">add</i></button>
+                <button onclick="syncModal()" class="actionBtnClass"><i class="material-icons">sync</i></button>
+            </nav>
+        </header>
+
+        <main>
+            <div class="row">
+            </div>
+        </main>
+        <!-- card template -->
+        <template id="employeeCard">
+            <div class="card" style="width: 18rem;">
+                <img src="https://img.icons8.com/officel/160/000000/user.png" class="card-img-top" alt="...">
+                <a class="btn-floating waves-effect waves-light grey verticaltop" onclick="deleteEmployee(currEmpId)">
+                    <i class="material-icons">delete</i>
+                </a>
+                <div class="card-body">
+                    <h5 class="card-title">Nagappan Subramanian</h5>
+                    <h4 class="card-title">Architect</h5>
+                    <p class="card-text contact"> XXXXX-X0494 | nagappan08@gmail.com </p>
+                </div>
+            </div>
+        </template>
+        <!-- modal: add a shopping list form -->
+        <div class="modal">
+            <form id="employee-list-add" class="col s12 white"  onsubmit="saveEmployee(event);">
+            <div class="modal-content">
+                <h5>Add Employee</h5>
+                    <div class="row">
+                    <div class="input-field col s12">
+                        <input name="name" type="text" class="validate" placeholder="Name" required />
+                    </div>
+                    <div class="input-field col s12">
+                        <input name="mailId" type="text" class="validate" placeholder="EmailId" required />
+                    </div>
+                    <div class="input-field col s12">
+                        <input name="designation" type="text" class="validate" placeholder="Designation" required />
+                    </div>
+                    <div class="input-field col s12">
+                        <input name="mobileno" type="text" class="validate" placeholder="Mobile Number" required />
+                    </div>
+                    </div>
+            </div>
+            <div class="modal-footer primary-color">
+                <button class="btn-flat" type="button" onclick="closeModal()">Cancel</button>
+                <button class="btn-flat" type="submit" >Add</button>
+            </div>
+            </form>
+        </div>
+        <!-- modal: overlay -->
+        <div class="modal-overlay" onclick="closeModal()"></div>
+        <footer class="footerClass">
+            <script>document.write(process.platform);</script>
+        </footer>
+    </body>
+</html>

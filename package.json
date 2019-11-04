@@ -1,0 +1,23 @@
+{
+  "name": "firstelectron",
+  "productName": "emplist",
+  "version": "0.1.0",
+  "description": "first electron for quick start",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron main.js",
+    "build": "electron-packager . "
+  },
+  "author": "nagappan subramanian",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^6.0.12",
+    "electron-packager": "^14.1.0",
+    "pouchdb": "^7.1.1"
+  },
+  "dependencies": {
+    "electron-prebuilt": "^1.4.13",
+    "pouchdb-browser": "^7.1.1",
+    "pouchdb-find": "^7.1.1"
+  }
+}
