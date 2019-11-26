@@ -6,12 +6,13 @@
   "main": "main.js",
   "scripts": {
     "start": "electron main.js",
-    "build": "electron-packager . "
+    "build": "electron-packager . app --platform win32 --arch x64 --out dist/ "
   },
   "author": "nagappan subramanian",
   "license": "ISC",
   "devDependencies": {
     "electron": "^6.0.12",
+    "electron-installer-windows": "^2.0.0",
     "electron-packager": "^14.1.0",
     "pouchdb": "^7.1.1"
   },
