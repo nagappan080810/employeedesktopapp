@@ -11,7 +11,7 @@
   "author": "nagappan subramanian",
   "license": "ISC",
   "devDependencies": {
-    "electron": "^6.0.12",
+    "electron": "^11.5.0",
     "electron-installer-windows": "^2.0.0",
     "electron-packager": "^14.1.0",
     "pouchdb": "^7.1.1"
